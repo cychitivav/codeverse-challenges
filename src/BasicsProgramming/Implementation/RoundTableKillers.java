@@ -37,6 +37,7 @@ public class RoundTableKillers {
 
     /**
      * @param args the command line arguments
+     * @throws java.io.FileNotFoundException
      */
     public static void main(String[] args) throws FileNotFoundException {
         // All code application logic here
