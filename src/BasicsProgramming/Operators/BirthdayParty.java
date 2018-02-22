@@ -41,9 +41,21 @@ public class BirthdayParty {
         File f = new File("input.txt");
         Scanner in = new Scanner(System.in);
 
-        char C = in.next().charAt(0);
+        int T = in.nextInt();
+        int N;
+        int M;
 
-        System.out.println((int) C);
+        while (T > 0) {
+            N = in.nextInt();
+            M = in.nextInt();
+
+            if (M % N == 0) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+
+            T--;
+        }
     }
-
 }
