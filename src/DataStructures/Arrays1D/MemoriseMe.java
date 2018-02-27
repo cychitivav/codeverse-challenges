@@ -46,20 +46,20 @@ public class MemoriseMe {
         File f = new File("input.txt");
         Scanner in = new Scanner(f);
 
-        short N = in.nextShort();
+        int N = in.nextInt();
 
         short[] B = new short[N];
-        for (short i = 0; i < N; i++) {
+        for (int i = 0; i < N; i++) {
             B[i] = in.nextShort();
         }
 
-        short Q = in.nextShort();
+        int Q = in.nextInt();
 
         while (Q > 0) {
             short Bi = in.nextShort();
-            short count = 0;
+            int count = 0;
 
-            for (short i = 0; i < N; i++) {
+            for (int i = 0; i < N; i++) {
                 if (B[i] == Bi) {
                     count++;
                 }
