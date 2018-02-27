@@ -46,21 +46,30 @@ public class MemoriseMe {
         File f = new File("input.txt");
         Scanner in = new Scanner(f);
 
-        int T = in.nextInt();
-        int N;
-        int M;
+        short N = in.nextShort();
 
-        while (T > 0) {
-            N = in.nextInt();
-            M = in.nextInt();
+        short[] B = new short[N];
+        for (short i = 0; i < N; i++) {
+            B[i] = in.nextShort();
+        }
 
-            if (M % N == 0) {
-                System.out.println("Yes");
-            } else {
-                System.out.println("No");
+        short Q = in.nextShort();
+
+        while (Q > 0) {
+            short Bi = in.nextShort();
+            short count = 0;
+
+            for (short i = 0; i < N; i++) {
+                if (B[i] == Bi) {
+                    count++;
+                }
             }
-
-            T--;
+            if (count > 0) {
+                System.out.println(count);
+            } else {
+                System.out.println("NOT PRESENT");
+            }
+            Q--;
         }
     }
 }
