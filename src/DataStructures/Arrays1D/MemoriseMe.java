@@ -48,26 +48,19 @@ public class MemoriseMe {
 
         int N = in.nextInt();
 
-        short[] B = new short[N];
+        int[] B = new int[1001];
         for (int i = 0; i < N; i++) {
-            B[i] = in.nextShort();
+            B[in.nextInt()]++;
         }
 
         int Q = in.nextInt();
 
         while (Q > 0) {
-            short Bi = in.nextShort();
-            int count = 0;
-
-            for (int i = 0; i < N; i++) {
-                if (B[i] == Bi) {
-                    count++;
-                }
-            }
-            if (count > 0) {
-                System.out.println(count);
-            } else {
+            int Bi = in.nextInt();
+            if (B[Bi] == 0) {
                 System.out.println("NOT PRESENT");
+            } else {
+                System.out.println(B[Bi]);
             }
             Q--;
         }
