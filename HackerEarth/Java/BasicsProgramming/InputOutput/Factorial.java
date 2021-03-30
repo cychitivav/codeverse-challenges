@@ -14,7 +14,7 @@
  * Constraints
  * 1 ≤ N ≤ 10
  */
-package BasicsProgramming.InputOutput;
+//package BasicsProgramming.InputOutput;
 
 import java.util.*;
 import java.io.*;

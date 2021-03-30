@@ -33,7 +33,7 @@ public class ArraySum {
     public static void main(String[] args) throws FileNotFoundException {
         // All code application logic here
         File f = new File("input.txt");
-        Scanner in = new Scanner(f);
+        Scanner in = new Scanner(System.in);
 
         int N = in.nextInt();
         long sum = 0;

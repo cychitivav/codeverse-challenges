@@ -21,7 +21,7 @@ public class LifeTheUniverseAndEverything {
      */
     public static void main(String[] args) {
         // All code application logic here
-        File f = new File("");
+        //File f = new File("");
         Scanner in = new Scanner(System.in);
 
         short N = in.nextShort();
@@ -30,6 +30,7 @@ public class LifeTheUniverseAndEverything {
             System.out.println(N);
             N = in.nextShort();
         }
+        in.close();
 
     }
 

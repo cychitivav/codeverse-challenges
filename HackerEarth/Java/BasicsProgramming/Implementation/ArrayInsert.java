@@ -29,7 +29,7 @@
 package BasicsProgramming.Implementation;
 
 import java.io.*;
-import java.util.*;
+import java.util.Scanner;
 
 /**
  * @author Cristian Chitiva
@@ -44,7 +44,7 @@ public class ArrayInsert {
      */
     public static void main(String[] args) throws FileNotFoundException {
         // All code application logic here
-        File f = new File("input.txt");
+        //File f = new File("input.txt");
         Scanner in = new Scanner(System.in);
 
         int N = in.nextInt();
@@ -83,5 +83,6 @@ public class ArrayInsert {
                 }
             }
         }
+        in.close();
     }
 }
