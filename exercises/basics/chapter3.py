@@ -8,7 +8,7 @@ __email__ = "cychitivav@unal.edu.co"
 
 import cv2
 
-img = cv2.imread('exercises/images/lambo.jpg')
+img = cv2.imread('resources/images/lambo.jpg')
 print(img.shape)
 
 imgResized = cv2.resize(img, dsize=(600,300))

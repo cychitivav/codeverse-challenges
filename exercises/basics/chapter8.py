@@ -43,7 +43,7 @@ def getContours(image):
     
 
 # IMAGES
-img = cv2.imread('exercises/images/shapes.png')
+img = cv2.imread('resources/images/shapes.png')
 imgContour = img.copy()
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 imgBlur = cv2.GaussianBlur(imgGray, ksize=(7,7), sigmaX=1)

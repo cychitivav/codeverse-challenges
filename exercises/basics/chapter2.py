@@ -10,7 +10,7 @@ import cv2
 import numpy as np
 
 
-img = cv2.imread('exercises/images/lena.png')
+img = cv2.imread('resources/images/lena.png')
 
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 imgBlur = cv2.GaussianBlur(imgGray, ksize=(5,5), sigmaX=0)

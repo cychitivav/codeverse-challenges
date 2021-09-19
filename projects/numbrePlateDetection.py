@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     plateCascade = cv2.CascadeClassifier()
     plateCascade.load(
-        'exercises/resources/haarcascade_russian_plate_number.xml')
+        'resources/haarcascade_russian_plate_number.xml')
     minArea = 200
 
     retval = -1
@@ -43,4 +43,4 @@ if __name__ == '__main__':
         cv2.imshow('Original', img)
         retval = cv2.waitKey(1)
         
-    cv2.imwrite('projects/outputs/numberPlate.jpg', imgROI)
+    cv2.imwrite('outputs/numberPlate.jpg', imgROI)

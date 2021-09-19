@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 
 faceCascade = cv2.CascadeClassifier()
-faceCascade.load('exercises/resources/haarcascade_frontalface_default.xml')
+faceCascade.load('resources/haarcascade_frontalface_default.xml')
 
 
 cap = cv2.VideoCapture(1)

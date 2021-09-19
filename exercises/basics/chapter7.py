@@ -27,7 +27,7 @@ cv2.createTrackbar('Val max', 'TrackBars', 255, 255, empty)
 
 retval = -1
 while retval < 0:
-    img = cv2.imread('exercises/images/lambo.jpg')
+    img = cv2.imread('resources/images/lambo.jpg')
 
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
     h_min = cv2.getTrackbarPos('Hue min', 'TrackBars')
