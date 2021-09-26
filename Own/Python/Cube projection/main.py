@@ -1,6 +1,6 @@
 from tkinter import Tk, Canvas
 from math import cos, sin
-from MatrixMultiplication import*
+from MatrixMultiplication import *
 import time
 
 
