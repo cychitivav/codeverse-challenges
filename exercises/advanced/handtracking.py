@@ -14,13 +14,12 @@ import time
 if __name__ == "__main__":
     cap = cv2.VideoCapture(1)
 
-    mpHands = mp.solutions.hands
-    mpDraw = mp.solutions.drawing_utils
+    mp_hands = mp.solutions.hands
+    mp_draw = mp.solutions.drawing_utils
 
-    hands = mpHands.Hands()
+    hands = mp_hands.Hands()
 
-    prevTime = 0
-    currentTime = 0
+    prev_time = 0
     while cv2.waitKey(1) < 0:
         success, frame = cap.read()
         frame = cv2.flip(frame, flipCode=1)
@@ -43,14 +42,14 @@ if __name__ == "__main__":
                     
                     if kp == 0:
                         cv2.putText(frame, results.multi_handedness[idx].classification[0].label, (cx, cy),
-                                    cv2.FONT_HERSHEY_PLAIN, 1.5, (255, 0, 255), 2)
+                                    cv2.FONT_HERSHEY_PLAIN, 1.5, (255, 0, 0), 2)
 
-                mpDraw.draw_landmarks(
-                    frame, handLandmark, mpHands.HAND_CONNECTIONS)
+                mp_draw.draw_landmarks(
+                    frame, handLandmark, mp_hands.HAND_CONNECTIONS)
 
-        currentTime = time.time()
-        fps = int(1/(currentTime - prevTime))
-        prevTime = currentTime
+        curre_time = time.time()
+        fps = int(1/(curre_time - prev_time))
+        prev_time = curre_time
 
         frame = cv2.putText(frame, str(fps), (0, 20),
                             cv2.FONT_HERSHEY_PLAIN, 1.5, (255, 0, 255), 2)
