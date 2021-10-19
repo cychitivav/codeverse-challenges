@@ -1,21 +1,24 @@
 let time = 0;
 let wave = [];
 
-let slider;
+let circleSlider;
+let timeSlider;
 
 function setup() {
 	createCanvas(800, 400);
-    slider = createSlider(1, 30);
-    text(1)
+    circleSlider = createSlider(1, 30, 1);
+    timeSlider = createSlider(0.01, 0.2, 0.01, 0.01)
 }
 
 function draw() {
 	background(0);
+    text('n = ' + Math.round(circleSlider.value()/2), 400, 50);
+
 	translate(150, 200);
 	let x = 0;
-	let y = 0;
+	let y = 0;    
 
-	for (let n = 1; n <= slider.value(); n+=2) {
+	for (let n = 1; n <= circleSlider.value(); n+=2) {
 		let prevX = x;
 		let prevY = y;
 
@@ -42,7 +45,7 @@ function draw() {
 	}
 	endShape();
 
-	time += 0.05;
+	time += timeSlider.value();
 
 	if (wave.length > 450) {
 		wave.pop();
