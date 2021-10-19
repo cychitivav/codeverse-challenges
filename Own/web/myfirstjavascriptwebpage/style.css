@@ -1,150 +1,99 @@
 * {
 	margin: 0;
 	padding: 0;
-	font-family: 'Poppins', sans-serif;
-	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
 }
 
-.hero {
+body {
 	background-color: #1d2026;
-	min-height: 100vh;
-	width: 100%;
-	color: #fff;
-	position: relative;
 }
 
-nav {
+header {
+	display: flex;
+	padding: 20px 10%;
+	align-items: center;
+}
+
+header > a {
 	display: flex;
 	align-items: center;
-	padding: 20px 8%;
+	justify-content: center;
+	margin: 0 3px;
+	width: 20%;
 }
 
-nav .menu-img {
-	width: 25px;
-	margin-right: 20px;
-	cursor: pointer;
+a img {
+	width: 100%;
 }
 
-nav .logo {
-	width: 160px;
-	cursor: pointer;
+header nav {
+	display: flex;
+	flex-grow: 1;
 }
 
-nav ul {
-	flex: 1;
-	text-align: right;
-    margin-right: 50px;
-}
-
-nav ul li {
-	display: inline-block;
+header nav ul {
 	list-style: none;
-	margin: 0 20px;
+	flex-grow: 1;
+	display: flex;
+	justify-content: flex-end;
 }
 
-nav ul li a {
+header nav li {
+	padding: 0 1%;
+}
+
+header nav a {
 	text-decoration: none;
-	color: #fff;
+	color: rgb(255, 255, 255);
+	width: 100%;
 }
 
-button {
-	background: #efefef;
+header button {
+	margin: 0 2%;
+	cursor: pointer;
 	height: 30px;
 	width: 60px;
-	border-radius: 20px;
-	border: 0;
-	outline: 0;
-	cursor: pointer;
-    transition: background 0.5s;
-}
-
-button span {
-	display: block;
-	background: #999;
-	height: 26px;
-	width: 26px;
-	border-radius: 50%;
-	margin-left: 2px;
-    transition: background 0.5s, margin-left 0.5s;
-}
-
-.lamp-container {
-	position: absolute;
-	top: -20px;
-	left: 20%;
-	width: 200px;
-}
-
-.lamp { 
-    width: 100%;
-}
-
-.light {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    margin-left: -10px;
-    opacity: 0;
-    transition: opacity 2s;
-}
-
-.text-container {
-    max-width: 600px;
-    margin-top: 7%;
-    margin-left: 50%;
-}
-
-.text-container h1 {
-    font-size: 80px;
-    font-weight: 400;
-}
-
-.text-container a {
-    text-decoration: none;
-    background-color: #00986f;
-    padding: 14px 40px;
-    display: inline-block;
-    color: #fff;
-    font-size: 18px;
-    margin-top: 30px;
-    border-radius: 30px;
-}
-
-.control {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-top: 150px;
-}
-
-.control .line {
-    width: 250px;
-    height: 4px;
-    background-color: #fff;
-    margin: 0 20px;    
-    border-radius: 2px
-}
-
-.control .line span {
-    width: 50%;
-    height: 8px;
-    margin-top: -2px;
-    border-radius: 4px;
-    background-color: #00986f;
-    display: block;
+	border-radius: 15px;
+	background-color: rgb(124, 124, 124);
 }
 
 .active {
-    background: #00986f;
+	background: rgb(35, 152, 111) !important;
 }
 
-.active span {
-    background: #fff;
-    margin-left: 31px;
+header button span#slider {
+	display: block;
+	appearance: none;
+	background-color: rgb(255, 255, 255);
+	height: 26px;
+	width: 26px;
+	border-radius: 50%;
+	margin: 2px;
 }
 
-.on {
-    opacity: 1;
+span#slider:checked {
+	transform: translateX(30px);
+}
+
+main {
+	display: flex;
+}
+
+main .lamp-container {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
+	overflow: visible;
+}
+
+main .lamp-container .lamp {
+	width: 50%;
+}
+main .lamp-container .light {
+	width: 110%;
+}
+
+.e {
+	display: flex;
 }

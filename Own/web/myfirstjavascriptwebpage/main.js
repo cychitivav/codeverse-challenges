@@ -1,7 +1,7 @@
-function toggleBtn(){
-    var btn = document.getElementById("btn")
-    btn.classList.toggle("active");
+var swt = document.getElementById("switch");
+var light = document.getElementById("light");
 
-    var light = document.getElementById("light")
-    light.classList.toggle("on");
+function toggleBtn() {
+	swt.classList.toggle("active");
+	light.classList.toggle("on");
 }

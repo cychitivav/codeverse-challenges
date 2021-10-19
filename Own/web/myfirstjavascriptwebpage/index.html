@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Lamp web</title>
 
 		<link rel="stylesheet" href="style.css" />
@@ -12,29 +13,30 @@
 			rel="stylesheet"
 		/>
 
-		<script src="main.js"></script>
+		<script src="main.js" defer></script>
 	</head>
 	<body>
-		<div class="hero">
+		<header>
+			<a href="sign.html">
+				<img src="images/logo.png" class="logo" alt="logo" />
+			</a>
 			<nav>
-				<img src="images/menu.png" class="menu-img" />
-				<img src="images/logo.png" class="logo" />
-
 				<ul>
 					<li><a href="">Latest</a></li>
 					<li><a href="">Modern</a></li>
 					<li><a href="">Contemporary</a></li>
-					<li><a href="">Afford</a></li>
+					<li><a href="test.html">About</a></li>
 				</ul>
-
-				<button type="button" onclick="toggleBtn()" id="btn">
-					<span></span>
-				</button>
 			</nav>
+				<button onclick="toggleBtn()">
+					<span class="slider">h</span>
+				</button>
+		</header>
 
+		<main>
 			<div class="lamp-container">
-				<img src="images/lamp.png" class="lamp" />
-				<img src="images/light.png" class="light" id="light"/>
+				<img src="images/lamp.png" class="lamp" alt="lamp" />
+				<img src="images/light.png" class="light" id="light" alt="light"/>
 			</div>
 
 			<div class="text-container">
@@ -47,13 +49,43 @@
 					veniam ut! Maiores voluptate tempore quisquam asperiores obcaecati!
 				</p>
 				<a href="">Check all collections</a>
-
-				<div class="control">
-					<p>04</p>
-					<div class="line"><span></span></div>
-					<p>05</p>
-				</div>
 			</div>
-		</div>
+		</main>
+
+		<!-- <i class="fas fa-address-card"></i> -->
+
+		<div class="e">
+			<table border="1">
+				<tr>
+					<td></td>
+					<th>Child name</th>
+					<th colspan="2">Parent name</th>
+				</tr>
+				<tr>
+					<th rowspan="2">1</th>
+					<td rowspan="2">Juan Perez</td>
+					<td colspan="2">Rodrigo Perez</td>
+				</tr>
+				<tr>
+					<td colspan="2">Juana Gómez</td>
+				</tr>
+				<tr>
+					<th>2</th>
+					<td>Pedro Gonzales</td>
+					<td colspan="2">María Gonzales</td>
+				</tr>
+			</table>
+			
+			<ul>
+				<li>Perro</li>
+				<li>Gato</li>
+				<li>Caballo</li>
+			</ul>
+			
+			<ol reversed="true">
+				<li value="3">Llevar</li>
+				<li>Traer</li>
+			</ol>
+		</div class="e">
 	</body>
 </html>

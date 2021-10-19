@@ -1,0 +1,264 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: Fraunces, serif;
+	font-weight: 700;
+	font-size: 18px;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+header {
+	display: flex;
+	flex-direction: column;
+	background-image: url(images/desktop/image-header.jpg);
+	background-repeat: no-repeat;
+	background-size: 100vw;
+	min-height: 55vw;
+	background-position: bottom;
+}
+
+header nav {
+	display: flex;
+	margin: 30px 40px;
+	align-items: center;
+}
+
+header > nav > .logo {
+	display: flex;
+	align-items: center;
+}
+
+header nav ul {
+	display: flex;
+	flex-grow: 1;
+	justify-content: right;
+	margin: 0 25px;
+}
+
+header nav ul li {
+	display: flex;
+	font-family: Barlow, sans-serif;
+	margin: 0 25px;
+	color: #ffffff;
+	text-transform: capitalize;
+}
+
+header nav button {
+	background-color: #ffffff;
+	text-transform: uppercase;
+	padding: 20px 30px;
+	border: 0;
+	border-radius: 30px;
+    cursor: pointer;
+}
+
+header nav button:active {
+	background-color: #91daff;
+    color: #ffffff;
+}
+
+header h1 {
+	text-align: center;
+	color: #ffffff;
+	font-size: 50px;
+	text-transform: uppercase;
+	font-weight: bolder;
+	margin: 70px auto;
+	letter-spacing: 10px;
+}
+
+header > a {
+	margin: 20px auto;
+	width: 2%;
+}
+
+section {
+	display: flex;
+}
+
+.even {
+	flex-direction: row-reverse;
+}
+
+.odd {
+	flex-direction: row;
+}
+
+.info img {
+	width: 50%;
+}
+
+.info .description {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.info .description h2 {
+	font-size: 40px;
+	margin: 20px 0;
+	width: 62%;
+}
+
+.info .description p {
+	color: hsl(232, 10%, 55%);
+	font-family: Barlow, sans-serif;
+	margin: 20px 0;
+	line-height: 1.5em;
+	width: 62%;
+}
+
+.info .description a {
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 20px 0;
+	width: 62%;
+}
+
+.info .service {
+	background-size: cover;
+	align-items: center;
+	justify-content: flex-end;
+	min-height: 37vw;
+}
+
+.info .design {
+	background-image: url(images/desktop/image-graphic-design.jpg);
+}
+
+.info .design h2 {
+	text-transform: capitalize;
+	text-align: center;
+	color: hsl(167, 40%, 24%);
+	width: 52%;
+}
+
+.info .design p {
+	text-align: center;
+	color: hsl(167, 40%, 24%);
+	width: 52%;
+}
+
+.info .photo {
+	background-image: url(images/desktop/image-photography.jpg);
+}
+
+.info .photo h2 {
+	text-transform: capitalize;
+	text-align: center;
+	color: hsl(198, 62%, 26%);
+	width: 380px;
+}
+
+.info .photo p {
+	text-align: center;
+	color: hsl(198, 62%, 26%);
+	width: 380px;
+}
+
+.clients {
+	flex-direction: column;
+	padding: 100px 110px;
+	align-items: center;
+	justify-content: center;
+}
+
+.clients h2 {
+	color: hsl(232, 10%, 55%);
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 10px;
+	margin: 50px;
+}
+
+.clients ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+}
+
+.clients ul li {
+	display: flex;
+	flex-direction: column;
+	margin: 10px;
+	align-items: center;
+	flex: 1 1 0;
+}
+
+.clients ul li img {
+	width: 20%;
+	margin: 40px;
+	border-radius: 50px;
+}
+
+.clients ul li p {
+	color: hsl(213, 9%, 39%);
+	font-family: Barlow, sans-serif;
+	line-height: 2em;
+	margin: 20px;
+	text-align: center;
+}
+
+.clients ul li address {
+	color: hsl(232, 10%, 55%);
+	font-family: Barlow, sans-serif;
+	font-style: normal;
+	margin: 20px;
+	text-align: center;
+}
+
+.clients ul li address span {
+	color: #000;
+	line-height: 2em;
+	font-family: Fraunces, serif;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	background-color: #94c0b7;
+	color: hsl(168, 34%, 41%);
+	align-items: center;
+}
+
+footer .gallery {
+	display: flex;
+	margin-bottom: 40px;
+	width: 100%;
+}
+
+footer .gallery img {
+	flex: 1 1 0;
+    min-width: 0;
+}
+
+footer .logo {
+	margin: 30px;
+}
+
+footer ul {
+	list-style: none;
+	display: flex;
+	margin: 20px;
+}
+
+footer ul li {
+	padding: 0 30px;
+	font-family: Barlow, sans-serif;
+	text-transform: capitalize;
+}
+
+footer p#contact {
+	margin: 60px;
+}
+
+footer p#contact a {
+	text-decoration: none;
+	padding: 15px;
+}
