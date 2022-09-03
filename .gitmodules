@@ -1,6 +1,0 @@
-[submodule "opencv"]
-	path = opencv
-	url = https://github.com/cychitivav/opencv.git
-[submodule "gittrain"]
-	path = gittrain
-	url = https://github.com/cychitivav/gittrain.git
