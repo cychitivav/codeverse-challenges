@@ -60,10 +60,18 @@ Components INSIDE the Docker circle:
 
 Within the Docker architecture we find:
 
-* __Containers__: It is the reason for the Docker creation, it is where we can encapsulate our images to take them to another computer, server, etc.
+* __Containers__: It is the reason for the Docker creation, it is where we can encapsulate our images to take them to another computer, server, etc. It's like a lightweight virtual machine.
 
 * __Images__: They are the encapsulations of x container. We can run our Java application through an image, we can use Ubuntu to run our project, etc.
 * __Data volumes__: We can securely access the file system of our machine.
 
 * __Networks__: These are the ones that allow communication between containers or external devices.
+
+
+## Docker commands
+
+| __Command__ | __Description__ |
+| :--- | :--- |
+| `docker run <image>` | Run a container from an image |
+
 
