@@ -70,13 +70,19 @@ Within the Docker architecture we find:
 
 ## Docker commands
 
+### Containers
+
 | __Command__ | __Description__ |
 | :---------- | :-------------- |
 | `docker run <image> <command>` | Run a container from an image. |
 | ^^ | With the flag `--name <name>` we can name the container. |
-| ^^ | The flag `-d` allows us to run the container in the background (_detach mode_) |
+| ^^ | The flag `-d` allows us to run the container in the background (*detach mode*) |
 | ^^ | In order to run the container in the foreground, we must use the flag `-it` |
 | ^^ | The flag `-p <hostPort>:<containerPort>` allows us to map the container port to the host port. This way we can access the container from the outside. |
+| ^^ | The flag `-v <hostPath>:/<containerPath>` allows us to map the container path to the host path. This way we can access the container from the outside. |
+| ^^ | The flag `-e <key>=<value>` allows us to set environment variables. |
+| `docker stop <containerID/name>` | Stop one or more running containers. |
+| `docker start <containerID/name>` | Start one or more stopped containers. |
 | `docker ps` | Lists all the running containers. |
 | ^^ | The flag `-a` list all containers. |
 | `docker inspect <containerID>` | Display detailed information on one or more containers. |
@@ -84,5 +90,21 @@ Within the Docker architecture we find:
 |`docker rename <currentName> <newName>` | Rename a container. |
 | `docker rm <containerID/name>` | Remove one or more containers. |
 | `docker container prune` | Remove all stopped containers. |
-| `docker stop <containerID/name>` | Stop one or more running containers. |
 | `docker exec -it <containerID/name> <command>` | Run a command in a running container and in the integrated terminal. |
+| `docker logs <containerID/name>` | Fetch the logs of a container. |
+| ^^ | With the flag `-n <number>` you can see the last *\<number\>* lines in the container log. |
+| ^^ | With the flag `-f` you can follow the log output until press <kbd>Ctrl</kbd>+<kbd>c</kbd> or stop the process. |
+
+### Volumes
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/30636259/198846381-c32fd987-bdb5-4972-9cb7-78622a224dd7.png" width="500">
+</div>
+
+| __Command__ | __Description__ |
+| :---------- | :-------------- |
+| `docker volume ls` | List all volumes. |
+| `docker volume create <name>` | Create a volume. | 
+| `docker volume rm <volume>` | Remove one or more volumes. |       
+| `docker run --mount src=<volumen>,dst=<containerPath> <image>` | Run a container with a volume mounted in the container path. | 
+| `docker cp <file> <containerID>:<containerPath>` | Copy a file from the host to the container. |
+| `docker cp <containerID>:<containerFile> <hostPath>` | Copy a file from the container to the host. |
