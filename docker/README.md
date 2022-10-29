@@ -71,11 +71,18 @@ Within the Docker architecture we find:
 ## Docker commands
 
 | __Command__ | __Description__ |
-| :--- | :--- |
-| `docker run <image>` | Run a container from an image With the flag `--name <name>` we can name the container |
-| `docker ps` | List running containers |
-| `docker ps -a` | List all containers |
-| `docker inspect <containerID>` | Display detailed information on one or more containers |
-|`docker rename <currentName> <newName>` | Rename a container |
-| `docker rm <containerID/name>` | Remove one or more containers |
-
+| :---------- | :-------------- |
+| `docker run <image> <command>` | Run a container from an image. |
+| ^^ | With the flag `--name <name>` we can name the container. |
+| ^^ | The flag `-d` allows us to run the container in the background (_detach mode_) |
+| ^^ | In order to run the container in the foreground, we must use the flag `-it` |
+| ^^ | The flag `-p <hostPort>:<containerPort>` allows us to map the container port to the host port. This way we can access the container from the outside. |
+| `docker ps` | Lists all the running containers. |
+| ^^ | The flag `-a` list all containers. |
+| `docker inspect <containerID>` | Display detailed information on one or more containers. |
+| ^^ | With the flag format `-f '<string>'` we can filter the information. |
+|`docker rename <currentName> <newName>` | Rename a container. |
+| `docker rm <containerID/name>` | Remove one or more containers. |
+| `docker container prune` | Remove all stopped containers. |
+| `docker stop <containerID/name>` | Stop one or more running containers. |
+| `docker exec -it <containerID/name> <command>` | Run a command in a running container and in the integrated terminal. |
