@@ -2,7 +2,7 @@
 This is ...
 
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/30636259/198832914-75556dc1-287d-4eaa-809f-e6e626c2ac8b.png" width="400">
+    <img src="https://user-images.githubusercontent.com/30636259/198832914-75556dc1-287d-4eaa-809f-e6e626c2ac8b.png" width="700">
 </div>
 
 ## Why Docker?
@@ -29,11 +29,11 @@ This is ...
 Build, distribute and run your code anywhere without worrying.
 
 <div align="center">
-    <img src="https://user-images.githubusercontent.com/30636259/198833177-49869123-5771-466e-ae2f-06f841cd6b4b.png" width="400">
+    <img src="https://user-images.githubusercontent.com/30636259/198833177-49869123-5771-466e-ae2f-06f841cd6b4b.png" width="500">
 </div>
 
 ## Installation
-In order to install Docker in Ubuntu, you must add the Docker repository to the system and then install the Docker Engine and CLI. To do this, follow the steps below:
+In order to install Docker in Ubuntu (you also can use [Play with Docker platform](https://labs.play-with-docker.com/)), you must add the Docker repository to the system and then install the Docker Engine and CLI. To do this, follow the steps below:
 
 ```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
@@ -45,4 +45,25 @@ docker version
 docker info
 ```
 
+
+## Docker architecture
+
+<div align="center">
+    <img src="https://user-images.githubusercontent.com/30636259/198833654-dc1c5d8b-c8e6-4141-8f0b-c471a84a488b.png" width="500">
+</div>
+
+Components INSIDE the Docker circle:
+
+* __Docker daemon__: It is the center of docker, the heart that thanks to it, we can communicate with docker services.
+* __REST API__: Like any other API, it is the one that allows us to visualize docker in a "graphical" way.
+* __Docker Client__: Thanks to this component, we can communicate with the heart of Docker (Docker Daemon) which by default is the command line.
+
+Within the Docker architecture we find:
+
+* __Containers__: It is the reason for the Docker creation, it is where we can encapsulate our images to take them to another computer, server, etc.
+
+* __Images__: They are the encapsulations of x container. We can run our Java application through an image, we can use Ubuntu to run our project, etc.
+* __Data volumes__: We can securely access the file system of our machine.
+
+* __Networks__: These are the ones that allow communication between containers or external devices.
 
