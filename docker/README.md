@@ -72,6 +72,10 @@ Within the Docker architecture we find:
 
 | __Command__ | __Description__ |
 | :--- | :--- |
-| `docker run <image>` | Run a container from an image |
-
+| `docker run <image>` | Run a container from an image With the flag `--name <name>` we can name the container |
+| `docker ps` | List running containers |
+| `docker ps -a` | List all containers |
+| `docker inspect <containerID>` | Display detailed information on one or more containers |
+|`docker rename <currentName> <newName>` | Rename a container |
+| `docker rm <containerID/name>` | Remove one or more containers |
 
