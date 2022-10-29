@@ -106,5 +106,28 @@ Within the Docker architecture we find:
 | `docker volume create <name>` | Create a volume. | 
 | `docker volume rm <volume>` | Remove one or more volumes. |       
 | `docker run --mount src=<volumen>,dst=<containerPath> <image>` | Run a container with a volume mounted in the container path. | 
-| `docker cp <file> <containerID>:<containerPath>` | Copy a file from the host to the container. |
-| `docker cp <containerID>:<containerFile> <hostPath>` | Copy a file from the container to the host. |
+| `docker cp <hostPath> <containerID>:<containerPath>` | Copy files from the host to the container. |
+| `docker cp <containerID>:<containerPath> <hostPath>` | Copy files from the container to the host. |
+
+
+### Images
+
+| __Command__ | __Description__ |
+| :---------- | :-------------- |
+| `docker image ls` | List all images. |
+| `docker image pull <image>` | Pull an image from a repository. |
+| `docker build -t <name>:<tag> <path>` | Build an image from a Dockerfile. |
+
+
+#### Dockerfile
+The structure of a Dockerfile is as follows:
+
+```dockerfile
+FROM <image> # Base image
+
+RUN <command> # Execute a command
+
+COPY <hostPath> <containerPath> # Copy files from the host to the container
+
+WORKDIR <containerPath> # Set the working directory
+```
