@@ -81,6 +81,7 @@ Within the Docker architecture we find:
 | ^^ | The flag `-p <hostPort>:<containerPort>` allows us to map the container port to the host port. This way we can access the container from the outside. |
 | ^^ | The flag `-v <hostPath>:/<containerPath>` allows us to map the container path to the host path. This way we can access the container from the outside. |
 | ^^ | The flag `-e <key>=<value>` allows us to set environment variables. |
+| ^^ | The flag `--rm` allows us to remove the container when it stops. |
 | `docker stop <containerID/name>` | Stop one or more running containers. |
 | `docker start <containerID/name>` | Start one or more stopped containers. |
 | `docker ps` | Lists all the running containers. |
@@ -114,9 +115,13 @@ Within the Docker architecture we find:
 
 | __Command__ | __Description__ |
 | :---------- | :-------------- |
-| `docker image ls` | List all images. |
+| `docker image ls` or `docker images` | List all images. |
 | `docker image pull <image>` | Pull an image from a repository. |
 | `docker build -t <name>:<tag> <path>` | Build an image from a Dockerfile. |
+| `docker image rm <image>` | Remove one or more images. |
+| `docker tag <image> <name>:<tag>` | Tag an image into a repository. |
+| `docker push <name>:<tag>` | Push an image or a repository to a registry. |
+| `docker history <image>` | Show the history of an image. |
 
 
 #### Dockerfile
@@ -129,5 +134,66 @@ RUN <command> # Execute a command
 
 COPY <hostPath> <containerPath> # Copy files from the host to the container
 
-WORKDIR <containerPath> # Set the working directory
+WORKDIR <containerPath> # Set the working directory (similar to cd)
+
+EXPOSE <port> # Expose a port
+
+ENV <key>=<value> # Set environment variables
+
+CMD ["<command>","[arg1]","[arg2]"] # Execute a command when the container starts
+```
+
+### Networks
+
+| __Command__ | __Description__ |
+| :---------- | :-------------- |
+| `docker network ls` | List all networks. |
+| `docker network create <name>` | Create a network. |
+| ^^ | With the flag `--driver <driver>` we can specify the driver. |
+| ^^ | With the flag `--attachable` we can attach containers to the network. |
+
+| `docker network rm <network>` | Remove one or more networks. |
+| `docker network connect <network> <container>` | Connect a container to a network. |
+| `docker network disconnect <network> <container>` | Disconnect a container from a network. |
+
+
+### Docker Compose
+
+```yaml
+version: '<version>' # Version of docker-compose
+
+services:
+    <service>:
+        image: '<image>' # Image of the service
+        container_name: '<name>' # Name of the container
+        ports:
+            - '<hostPort>:<containerPort>' # Port mapping
+        volumes:
+            - '<hostPath>:<containerPath>' # Volume mapping
+        environment:
+            - '<key>=<value>' # Environment variables
+        command: '<command>' # Command to execute when the container starts
+        depends_on:
+            - '<service>' # Service on which the current service depends
+        networks:
+            - '<network>' # Network to which the service belongs
+        restart: '<policy>' # Restart policy
+        stdin_open: true # Open the integrated terminal
+        tty: true # Open the integrated terminal
+        build:
+        context: '<path>' # Path to the Dockerfile
+        dockerfile: '<name>' # Name of the Dockerfile
+        args:
+            - '<key>=<value>' # Arguments of the Dockerfile
+        logging:
+        driver: '<driver>' # Driver of the logs
+        options:
+            - '<key>=<value>' # Options of the logs
+        networks:
+        default:
+            external:
+            name: '<network>' # Network to which the service belongs
+        volumes:
+            - '<volume>':
+                external: true # Volume to which the service belongs
 ```
