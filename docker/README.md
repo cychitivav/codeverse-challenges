@@ -82,10 +82,12 @@ Within the Docker architecture we find:
 | ^^ | The flag `-v <hostPath>:/<containerPath>` allows us to map the container path to the host path. This way we can access the container from the outside. |
 | ^^ | The flag `-e <key>=<value>` allows us to set environment variables. |
 | ^^ | The flag `--rm` allows us to remove the container when it stops. |
+| ^^ | The flag `--memory <memory>` allows us to set the memory limit for the container. |
 | `docker stop <containerID/name>` | Stop one or more running containers. |
 | `docker start <containerID/name>` | Start one or more stopped containers. |
 | `docker ps` | Lists all the running containers. |
 | ^^ | The flag `-a` list all containers. |
+| ^^ | The flag `-q` list only the container IDs. |
 | `docker inspect <containerID>` | Display detailed information on one or more containers. |
 | ^^ | With the flag format `-f '<string>'` we can filter the information. |
 |`docker rename <currentName> <newName>` | Rename a container. |
@@ -140,6 +142,7 @@ EXPOSE <port> # Expose a port
 
 ENV <key>=<value> # Set environment variables
 
+ENTRYPOINT <command> # Configure a container that will run as an executable
 CMD ["<command>","[arg1]","[arg2]"] # Execute a command when the container starts
 ```
 
@@ -155,21 +158,37 @@ CMD ["<command>","[arg1]","[arg2]"] # Execute a command when the container start
 | `docker network rm <network>` | Remove one or more networks. |
 | `docker network connect <network> <container>` | Connect a container to a network. |
 | `docker network disconnect <network> <container>` | Disconnect a container from a network. |
+| `docker network inspect <network>` | Display detailed information on one or more networks. |
 
 
 ### Docker Compose
+
+| __Command__ | __Description__ |
+| :---------- | :-------------- |
+| `docker-compose up` | Create and start containers. |
+| ^^ | With the flag `-d` we can run the containers in the background. |
+| `docker-compose down` | Stop and remove containers, networks, images, and volumes. |
+| `docker-compose ps` | List compose containers. |
+| `docker-compose logs [service]` | View output from containers. |
+| ^^ | With the flag `-f` we can follow the log output until press <kbd>Ctrl</kbd>+<kbd>c</kbd> or stop the process. |
+| `docker-compose exec <service> <command>` | Run a command in a running container and in the integrated terminal. |
+| `docker-compose build [service]` | Build or rebuild services. | 
+
+#### docker-compose.yml/docker-compose.yaml
 
 ```yaml
 version: '<version>' # Version of docker-compose
 
 services:
     <service>:
+        build: <path> # Path to the Dockerfile
         image: '<image>' # Image of the service
         container_name: '<name>' # Name of the container
         ports:
             - '<hostPort>:<containerPort>' # Port mapping
         volumes:
             - '<hostPath>:<containerPath>' # Volume mapping
+            - '<ignore>' # Ignore a file or directory
         environment:
             - '<key>=<value>' # Environment variables
         command: '<command>' # Command to execute when the container starts
@@ -197,3 +216,12 @@ services:
             - '<volume>':
                 external: true # Volume to which the service belongs
 ```
+
+> **Note**: You can use the file `docker-compose.override.yml` to add or override options of the file `docker-compose.yml` without modifying the original _yaml_ and avoid conflicts when updating the project or using version control systems (you can ignore it with _.gitignore_).
+
+### System
+
+| __Command__ | __Description__ |
+| :---------- | :-------------- |
+| `docker system prune` | Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes. |
+| `docker stats` | Display a live stream of container(s) resource usage statistics. |
