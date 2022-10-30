@@ -167,6 +167,9 @@ Example to change the permissions of a file to:
 | `find <path> -name <pattern>` | Find files by name. |
 | `grep <pattern> <file>` | Search for a pattern in a file. |
 | ^^ | Flag `-i` to ignore case. |
+| ^^ | Flag `-v` to exclude matches. |
+| ^^ | Flag `-m` to limit the number of lines. |
+| ^^ | Flag `-c` to print the number of matches. |
 
 
 ### Network
@@ -189,3 +192,14 @@ Example to change the permissions of a file to:
 | :--- | :--- |
 | `tar -czvf <file.tar.gz> <file/directory>` | Create a tar archive. |
 | `tar -xzvf <file.tar.gz>` | Extract a tar archive. |
+
+
+### Process management
+
+| Command | Description |
+| :--- | :--- |
+| `ps` | Print the processes. |
+| ^^ | Flag `-a` to print all processes. |
+| `top` | Print the processes sorted by CPU usage. |
+| `kill <pid>` | Kill a process. |
+| ^^ | Flag `-9` to kill a process immediately. |
