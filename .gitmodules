@@ -1,3 +1,6 @@
 [submodule "git"]
 	path = git
 	url = https://github.com/cychitivav/git_train
+[submodule "deep_learning"]
+	path = deep_learning
+	url = https://github.com/cychitivav/deep_learning.git
