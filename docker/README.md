@@ -1,5 +1,5 @@
 # Docker course
-This is ...
+The information in this directory is the result of the Docker course given by [Platzi](https://platzi.com/cursos/docker/). 
 
 <div align="center">
     <img src="https://user-images.githubusercontent.com/30636259/198832914-75556dc1-287d-4eaa-809f-e6e626c2ac8b.png" width="700">
@@ -130,10 +130,11 @@ Within the Docker architecture we find:
 The structure of a Dockerfile is as follows:
 
 ```dockerfile
-FROM <image> # Base image
+FROM <image> as <name> # We can use a base image
 
 RUN <command> # Execute a command
 
+COPY --from=<name> <source> <destination> # Copy files from another image
 COPY <hostPath> <containerPath> # Copy files from the host to the container
 
 WORKDIR <containerPath> # Set the working directory (similar to cd)
