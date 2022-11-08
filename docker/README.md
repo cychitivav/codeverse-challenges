@@ -146,6 +146,7 @@ ENV <key>=<value> # Set environment variables
 ENTRYPOINT <command> # Configure a container that will run as an executable
 CMD ["<command>","[arg1]","[arg2]"] # Execute a command when the container starts
 ```
+> **Note**: A complete list of Dockerfile commands is here[^dockerfile].
 
 ### Networks
 
@@ -226,3 +227,6 @@ services:
 | :---------- | :-------------- |
 | `docker system prune` | Remove all unused containers, networks, images (both dangling and unreferenced), and optionally, volumes. |
 | `docker stats` | Display a live stream of container(s) resource usage statistics. |
+
+
+[^dockerfile]: [Dockerfile commands](https://docs.docker.com/engine/reference/builder/)
