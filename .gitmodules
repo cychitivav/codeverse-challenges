@@ -1,0 +1,12 @@
+[submodule "git"]
+	path = git
+	url = https://github.com/cychitivav/git_train
+[submodule "deep_learning"]
+	path = deep_learning
+	url = https://github.com/cychitivav/deep_learning
+[submodule "fastapi_course"]
+	path = fastapi_course
+	url = https://github.com/cychitivav/fastapi_course
+[submodule "fastapi"]
+	path = fastapi
+	url = https://github.com/cychitivav/fastapi_course
