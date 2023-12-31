@@ -7,11 +7,12 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 
-Author: Cristian Chitiva <cychitivav@unal.edu.co>
-Date: 30 December 2023
-
 Solution: 233168
 """
+
+__author__ = "Cristian Chitiva"
+__date__ = "2019/12/30"
+__email__ = "cychitivav@unal.edu.co"
 
 
 def sum_multiples(n):

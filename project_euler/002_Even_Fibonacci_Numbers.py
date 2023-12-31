@@ -10,12 +10,12 @@ terms. By starting with 1 and 2, the first 10 terms will be:
 By considering the terms in the Fibonacci sequence whose values do not exceed
 four million, find the sum of the even-valued terms.
 
-
-Author: Cristian Chitiva <cychitivav@unal.edu.co>
-Date: 30 December 2023
-
 Solution: 4613732
 """
+
+__author__ = "Cristian Chitiva"
+__date__ = "2019/12/30"
+__email__ = "cychitivav@unal.edu.co"
 
 
 def fibonacci():
