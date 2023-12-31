@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 Given two strings of equal length, you have to tell whether they both strings are identical.
 

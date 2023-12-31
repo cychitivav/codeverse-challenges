@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 You have been given an array A of size N consisting of positive integers. You need to find and print the product of all the number in this array Modulo 10^9 + 7.
 
@@ -19,7 +19,7 @@ __email__ = "cychitivav@unal.edu.co"
 
 N = int(input())
 answer = 1
-A = list(map(int,input().split()))
+A = list(map(int, input().split()))
 
 for i in A:
     answer *= i

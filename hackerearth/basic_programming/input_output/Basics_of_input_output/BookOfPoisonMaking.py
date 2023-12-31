@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 Harry wants to find Voldemort's potion making book but he is confused about how to get it.
 

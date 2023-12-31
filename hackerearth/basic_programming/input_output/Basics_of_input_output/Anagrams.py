@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 Given two strings, a and b , that may or may not be of the same length, determine the minimum number of character deletions required to make a and b anagrams. Any characters can be deleted from either of the strings.
 
@@ -34,6 +34,6 @@ while T > 0:
         if c in B:
             B.remove(c)
             common += 2
-            
+
     print(total - common)
     T -= 1

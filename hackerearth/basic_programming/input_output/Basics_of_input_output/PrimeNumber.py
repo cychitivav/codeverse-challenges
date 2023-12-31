@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 You are given an integer N. You need to print the series of all prime numbers till N.
 

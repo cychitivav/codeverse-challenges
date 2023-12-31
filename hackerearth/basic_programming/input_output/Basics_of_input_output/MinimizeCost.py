@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 You are given an array of numbers Ai which contains positive as well as negative numbers . The cost of the array can be defined as C(X)
 
@@ -41,6 +41,5 @@ __date__ = "March 18, 2019"
 __email__ = "cychitivav@unal.edu.co"
 
 
-N=os.read(0,2).decode()
+N = os.read(0, 2).decode()
 print(type(N))
-

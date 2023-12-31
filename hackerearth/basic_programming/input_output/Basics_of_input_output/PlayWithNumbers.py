@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 You are given an array of n numbers and q queries. For each query you have to print the floor of the expected value(mean) of the subarray rom L to R.
 
@@ -30,4 +30,3 @@ A = [int(i) for i in read(0, 100).split()]
 for i in range(Q):
     L, R = map(int, read(0, 100).split(' '))
     print(sum(A[L-1:R])//(R-L+1))
-

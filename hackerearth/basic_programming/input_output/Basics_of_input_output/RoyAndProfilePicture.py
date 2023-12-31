@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 Roy wants to change his profile picture on Facebook. Now Facebook has some restriction over the dimension of picture that we can upload.
 Minimum dimension of the picture can be L x L, where L is the length of the side of square.
@@ -40,7 +40,7 @@ L = int(input())
 N = int(input())
 
 while N > 0:
-    W, H = list(map(int,input().split()))
+    W, H = list(map(int, input().split()))
 
     if W < L or H < L:
         print("UPLOAD ANOTHER")
@@ -48,5 +48,5 @@ while N > 0:
         print("ACCEPTED")
     else:
         print("CROP IT")
-    
+
     N -= 1

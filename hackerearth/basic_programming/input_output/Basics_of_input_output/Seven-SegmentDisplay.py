@@ -1,4 +1,4 @@
-#!/Usr/bin/env python
+#!/usr/bin/env python
 """
 You all must have seen a seven segment display.If not here it is:
 
