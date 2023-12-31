@@ -9,6 +9,8 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 
 Author: Cristian Chitiva <cychitivav@unal.edu.co>
 Date: 30 December 2023
+
+Solution: 233168
 """
 
 
